@@ -1,3 +1,23 @@
+type Student = record {
+    id: nat64;
+    name: text;
+    age: nat32;
+    class: text;
+};
+
 service : {
-    "greet": (text) -> (text) query;
+
+    "insert_student": (id: nat64, Student) -> (opt Student);
+
+    "get_student": (id: nat64) -> (opt Student) query;
+    
+    "get_song_titles": () -> (text);
+
+    "get_song_titles_by_id": (id: text) -> (text);
+
+    "get_song_titles_by_genre": (genre: text) -> (text);
+
+    "get_song_titles_by_artist": (artist: text) -> (text);
+
+    "get_song_titles_by_name": (song_name: text) -> (text);
 }
