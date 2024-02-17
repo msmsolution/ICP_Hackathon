@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "make_api_calls_backend": {
+      "candid": "src/make_api_calls_backend/make_api_calls_backend.did",
+      "package": "make_api_calls_backend",
+      "type": "rust"
+    },
+    "make_api_calls_frontend": {
+      "dependencies": [
+        "make_api_calls_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/make_api_calls_frontend/src/index.html"
+      },
+      "source": [
+        "src/make_api_calls_frontend/assets",
+        "dist/make_api_calls_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
