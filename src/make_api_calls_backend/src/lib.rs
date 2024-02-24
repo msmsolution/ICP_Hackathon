@@ -14,6 +14,7 @@ struct Student {
     name: String,
     age: u32,
     class: String,
+    email: String,
 }
 //Implement storable trait
 impl Storable for Student {
@@ -27,7 +28,7 @@ impl Storable for Student {
 
 //Implement bounded trait
 impl BoundedStorable for Student {
-    const MAX_SIZE: u32 = MAX_VALUE_SIZE;
+    const MAX_SIZE: u64 = MAX_VALUE_SIZE;
     const IS_FIXED_SIZE: bool = false;
 }
 

@@ -3,6 +3,7 @@ type Student = record {
     name: text;
     age: nat32;
     class: text;
+    email: text;
 };
 
 service : {
